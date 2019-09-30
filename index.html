@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banco</title>
+
+
+
+<!-- Estilos -->
+<link href='css/columnas.css' rel='stylesheet' type='text/css'>
+<link href='css/gral.css' rel='stylesheet' type='text/css'>
+<link href='css/responsive.css' rel='stylesheet' type='text/css'>
+<link href='fonts/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="separacionHeader"></div>
+
+	<div id="content" style="text-align:center">
+
+		<div class="colum1 F-left">
+			<div id="tituloPage"> </div>
+			<div class="clear"></div>
+		</div>
+
+
+
+		<div class="colum1 F-left">
+			<div class="colum2" style="margin:50px auto">
+
+				<div class="input colum1 F-left">
+					<div class="wrapper">
+						<div class="pass placeholderInstruccion animate">Usuario:</div>
+						<input type="text" id="icon_prefix" placeholder="Usuario" required />
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="input colum1 F-left">
+					<div class="wrapper">
+						<div class="user placeholderInstruccion animate">Contraseña</div>
+						<input type="password" id="icon_prefix1" placeholder="Contraseña" required />
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="colum1 F-left">
+					<input  id="botonIngresa" class="btSiguiente" value="Ingresar" style="font-size: 14pt;width: 150px" />
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+		</div>
+		<div class="colum1 F-left contenedorConfirmaionLogin" style="display: none;">
+			<div class="colum2" style="margin:50px auto">
+				<div class="colum1 F-left">
+					Favor de actualizar su contraseña
+				</div>
+				<div class="input colum1 F-left">
+					<div class="wrapper">
+						<div class="pass placeholderInstruccion animate">Usuario:</div>
+						<input type="password" id="icon_prefix_confirm" type="password" placeholder="Cambiar contraseña:" required />
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="colum1 F-left">
+					<input  id="botonConfimar" class="botonIngresa" value="Confirmar" style="border: none;font-size: 14pt;width: 150px" />
+				</div>
+			</div>
+		</div>
+
+
+		<div class="clear"></div>
+	</div>
+	<!--PARA AWS -->
+
+	<!--Scripts al final del tag <body>-->
+
+	<script type="text/javascript" src="js/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="js/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="js/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="js/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="js/aws-cognito-sdk.min.js"></script>
+	<script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+	<script type="text/javascript" src="js/aws-sdk-2.105.0.min.js"></script>
+
+
+
+	<script type="text/javascript" src="js/Modulos/Base/ClienteAWSCognito.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+
+
+</body>
+</html>

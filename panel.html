@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Banco</title>
+
+	<meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?>">
+
+	<!-- Estilos -->
+	<link href='css/columnas.css' rel='stylesheet' type='text/css'>
+	<link href='css/gral.css' rel='stylesheet' type='text/css'>
+	<link href='css/jquery.dataTables.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/responsive.css' rel='stylesheet' type='text/css'>
+	<link href='fonts/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<div class="custLoader" id="custLoader" >
+		<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+	</div>
+	<div id="separacionHeader"></div>
+
+	<div id="content">
+		<div class="menuSup">
+			<a id="get" class="animate">Retirar  <i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+			<a id="save" class="animate">Depositar  <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+			<a id="logout" class="animate">Cerrar sesión <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+		</div>
+		<div class="colum1 F-left">
+			<div class="clear"></div>
+		</div>
+		<div class="colum1 F-left" id="container">
+		</div>
+		<div class="colum1 F-left" id="container-mov">
+			<div class="colum1 F-left title-mov">Movimientos</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="content-modal">
+		<div class="content-config">
+			<div id="cancelSave" class="button button-save-style-2 button-cancel">X</div> 
+			<div id="n-content" class="content-check"><label for="cantidad">Cantidad:</label><input type="text" id="cantidad" name="cantidad" class="" value=""  required minlength="4" maxlength="6" size="10"></div>
+			<div class="menuSup">
+				<a id="aceptar" class="animate">Aceptar</a>
+			</div>
+		</div>
+	</div>
+
+		<script type="text/javascript" src="js/apiGatewayCore/sigV4Client.js"></script>
+		<script type="text/javascript" src="js/apiGatewayCore/apiGatewayClient.js"></script>
+		<script type="text/javascript" src="js/apiGatewayCore/simpleHttpClient.js"></script>
+		<script type="text/javascript" src="js/apiGatewayCore/utils.js"></script>
+		<script type="text/javascript" src="js/aws-cognito-sdk.min.js"></script>
+		<script type="text/javascript" src="js/amazon-cognito-identity.min.js"></script>
+		<script type="text/javascript" src="js/aws-sdk-2.105.0.min.js"></script>
+
+		<!--Scripts al final del tag <body>-->
+
+		<script type="text/javascript" src="js/Modulos/Base/AppParametros.js"></script>
+		<script type="text/javascript" src="js/Modulos/Base/AppUtilerias.js"></script>
+		<script type="text/javascript" src="js/Modulos/Base/ClienteAWSCognito.js"></script>
+		<script type="text/javascript" src="js/Modulos/Base/Admin.js"></script>
+		<script type="text/javascript" src="js/Modulos/Base/AppSamTeSesion.js"></script>
+		<script type="text/javascript" src="js/Modulos/Base/ClienteAWSLambda.js"></script>
+
+
+
+		<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
